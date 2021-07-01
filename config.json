@@ -1,0 +1,21 @@
+{
+  "server": {
+    "port": 3434
+  },
+  "compile": {
+    "time": "onRequest",
+    "cache": {
+      "enabled": true,
+      "location": "./compileCache",
+      "destroyOnStart": true
+    },
+    "temp": {
+      "location": "./compileTemp"
+    }
+  },
+  "client": {
+    "location": "turtlejs-client"
+  },
+  "ignoreCompilationDiscoveryErrors": true,
+  "ignoreCompilationErrors": false
+}
