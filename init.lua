@@ -52,7 +52,7 @@ end
 
 local endpoint = "http"
 
-if namedTokens["s"] then
+if indexTokens["s"] then
   endpoint = endpoint .. "s"
 end
 
@@ -117,8 +117,6 @@ end
 
 
 local r = require("cc.require")
-namedTokens["host"] = nil
-namedTokens["port"] = nil
 local env = setmetatable({ arguments = { namedTokens = namedTokens, indexTokens = indexTokens } }, { __index = _ENV })
 env.require, env.package = r.make(env, "/turtlejs/prog/turtlejs-client/")
 env.require(primaryFileName)

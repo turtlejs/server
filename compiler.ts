@@ -16,6 +16,8 @@ export class Compiler {
 
     compile(project, to);
 
+    fs.writeFileSync(path.join(to, "package.json"), fs.readFileSync(path.join(require.resolve(project), "..", "package.json")));
+
     return { luaPrimaryFile, files: recursiveReadDirectoryWithContents(to) };
   }
 }
